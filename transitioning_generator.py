@@ -29,12 +29,12 @@ if __name__ == '__main__':
         duration.text = '895.0'
         image_file = ElementTree.SubElement(static, 'file')
         image_file.text = os.path.join(curdir, images[cur_index])
-        transiction = ElementTree.SubElement(root, 'transiction')
-        transiction_duration = ElementTree.SubElement(transiction, 'duration')
-        transiction_duration.text = '5.0'
-        from_file = ElementTree.SubElement(transiction, 'from')
+        transition = ElementTree.SubElement(root, 'transition')
+        transition_duration = ElementTree.SubElement(transition, 'duration')
+        transition_duration.text = '5.0'
+        from_file = ElementTree.SubElement(transition, 'from')
         from_file.text = os.path.join(curdir, images[cur_index])
-        to_file = ElementTree.SubElement(transiction, 'to')
+        to_file = ElementTree.SubElement(transition, 'to')
         if (cur_index + 1 == image_count):
             to_file.text = os.path.join(curdir, images[0])
         else:
